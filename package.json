@@ -1,0 +1,9 @@
+{
+  "name": "simulador-ctfl e ctfl-at",
+  "version": "1.0.0",
+  "description": "Simulador de exames ISTQB CTFL e CTFL-AT",
+  "scripts": {
+    "start": "npx serve . -p 3000",
+    "serve": "npx serve . -p 3000"
+  }
+}

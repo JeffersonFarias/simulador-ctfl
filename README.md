@@ -1,131 +1,123 @@
+# 📋 Simulador CTFL e CTFL-AT - Exames ISTQB
 
-# 📋 Simulador CTFL v4.0 - Exame Oficial ISTQB
+Simulador de provas para as certificações **ISTQB CTFL v4.0** (Foundation Level) e **CTFL-AT** (Agile Tester), com questões oficiais e justificativas.
 
-## ✅ Questões Oficiais Incluídas
+## ✅ Conteúdo Incluído
 
-Este projeto traz um simulado do exame **ISTQB CTFL v4.0** (Certified Tester Foundation Level) com as **40 questões oficiais do Exame A**, extraídas diretamente do PDF oficial, incluindo as respostas corretas conforme o gabarito.
+- **CTFL v4.0:** Simulados A, B e C (questões oficiais BSTQB) e Simulado D (prática). Modo aleatório com 40 questões embaralhadas dos três oficiais.
+- **CTFL-AT (Agile Tester):** Simulado A com as 40 questões do exame de exemplo BSTQB/ISTQB, com **justificativas** (explicação da resposta correta) na correção.
 
 ## 🎯 Sobre o Projeto
 
-O objetivo é permitir que candidatos pratiquem para a certificação ISTQB CTFL v4.0, simulando a experiência do exame real.
+Permite que candidatos pratiquem para as certificações ISTQB CTFL e CTFL-AT em ambiente similar ao exame: 40 questões, 60 minutos, nota mínima 65%.
 
 ## ✨ Características
 
-- 40 questões oficiais do Exame A (CTFL v4.0)
-- Questões categorizadas por nível de conhecimento (K1-K4)
-- Tempo de 60 minutos por simulado (padrão ISTQB)
-- Nota mínima para aprovação: 65% (26 de 40)
-- Interface responsiva e similar ao exame oficial
-- Timer regressivo
-- Relatório de desempenho ao final da tentativa
-- Histórico de tentativas salvo no navegador (LocalStorage)
+- **Dois tipos de exame:** seletor para CTFL (Foundation Level) ou CTFL-AT (Agile Tester).
+- **CTFL:** 40 questões por simulado, tempo de 60 min, nota mínima 65%. Modo aleatório (40 questões dos simulados A, B e C).
+- **CTFL-AT:** 40 questões, 60 min, 65%. Simulados listados no dropdown (sem modo aleatório).
+- Questões por nível de conhecimento (K1–K4) com destaque visual.
+- Suporte a questão de única escolha (radio) e múltipla escolha (checkbox).
+- **Tela de resultado:** para cada questão, exibe sua resposta, a correta e, quando houver, a **explicação** (“Por quê?”) da resposta correta.
+- Histórico de tentativas **separado** por tipo de exame (CTFL e CTFL-AT), salvo no navegador (LocalStorage).
+- Timer regressivo, gabarito detalhado, exportação de gabarito (PDF) e histórico das últimas tentativas.
 
 ## 🚀 Como Usar
 
-1. Abra o arquivo `index.html` no seu navegador.
-2. Clique em "Iniciar Quiz" para começar o simulado oficial (Exame A).
-3. Responda às 40 questões dentro do tempo limite.
-4. Clique em "Finalizar Tentativa" para ver seu resultado e análise de desempenho.
-5. Consulte o histórico de tentativas na mesma página.
+1. **Suba um servidor local** (o carregamento dos JSON dos simulados não funciona abrindo `index.html` direto pelo disco):
+   ```bash
+   npx serve
+   ```
+   Ou, com npm:
+   ```bash
+   npm start
+   ```
+   Acesse o endereço exibido (ex.: `http://localhost:3000`).
 
-> **Atenção:** No momento, apenas o Exame A (oficial) está disponível. Outros exames e funcionalidades avançadas citadas anteriormente ainda não estão implementados.
+2. Escolha o **tipo de exame** (CTFL ou CTFL-AT) e o **simulado** na lista.
 
-## Estrutura das Questões
+3. Clique em **Iniciar Quiz**, responda às 40 questões e use **Finalizar Quiz** ao terminar (ou ao esgotar o tempo).
 
-Cada questão possui:
+4. Na tela de resultado, confira acertos/erros e as **explicações** (“Por quê?”) quando disponíveis.
 
-- Enunciado
-- Alternativas (única ou múltipla escolha)
-- Nível de conhecimento (K1, K2, K3, K4)
-- Resposta correta
+5. Use **Histórico de Tentativas** e **Ver Gabarito** para revisar tentativas anteriores.
 
-**Níveis de conhecimento:**
+> **Dica:** Se aparecer "Failed to fetch", você está abrindo por `file://`. Use sempre `npx serve` (ou outro servidor local) na pasta do projeto.
 
-- K1 (Lembrar): fundo amarelo
-- K2 (Entender): fundo azul
-- K3 (Aplicar): fundo vermelho
-- K4 (Analisar): fundo roxo
+## Estrutura das Questões (JSON)
 
-## Critério de Aprovação
+Cada questão pode ter:
 
-- Nota mínima: 65%
-- Tempo limite: 60 minutos
-- 40 questões por tentativa
+- **Obrigatórios:** `id`, `questao`, `alternativas`, `correta`, `tipo`, `level`, `imagens`
+- **Opcional:** `explicacao` ou `justificativa` — texto exibido na correção como “Por quê?” (motivo da resposta correta)
 
-## Tecnologias Utilizadas
-
-- HTML5
-- CSS3 (Tailwind CSS)
-- JavaScript vanilla
-- LocalStorage para persistência do histórico
-
-## Como criar seu próprio arquivo de questões (JSON)
-
-
-O simulador lê um arquivo JSON no formato abaixo. Você pode criar novos simulados seguindo este padrão e salvando como, por exemplo, `SimuladoB.json`.
-
-**Exemplo de estrutura mínima:**
+**Exemplo:**
 
 ```json
 {
   "questoes": [
     {
       "id": "01",
-      "questao": "Enunciado da questão aqui.",
+      "questao": "Enunciado da questão.",
       "alternativas": {
         "A": "Texto da alternativa A",
         "B": "Texto da alternativa B",
         "C": "Texto da alternativa C",
         "D": "Texto da alternativa D"
       },
-      "correta": "A", // ou ["A", "B"] para múltipla escolha
-      "tipo": "Radio button", // ou "Checkbox" para múltipla escolha
-      "imagens": [], // array de caminhos para imagens (pode ser vazio)
-      "level": "K1" // K1, K2, K3 ou K4
+      "correta": "B",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K1",
+      "explicacao": "Justificativa opcional: por que B é a resposta correta."
     }
-    // ...outras questões...
   ]
 }
 ```
 
-**Campos obrigatórios por questão:**
-- `id`: identificador único
-- `questao`: enunciado
-- `alternativas`: objeto com letras e textos das opções
-- `correta`: letra(s) da(s) resposta(s) correta(s) (ex: "A" ou ["A", "B"])
-- `tipo`: "Radio button" (única escolha) ou "Checkbox" (múltipla escolha)
-- `level`: nível de conhecimento (K1, K2, K3, K4)
-- `imagens`: array de caminhos para imagens (pode ser vazio)
+- **Múltipla escolha:** use `"tipo": "Checkbox"` e `"correta": ["A", "C"]`.
+- **Explicação:** o simulador procura, nesta ordem: `explicacao`, `justificativa`, `comentario`, `explanation`. Se existir e não estiver vazio, será mostrado na tela de resultado.
 
-**Observações:**
-- O campo `alternativas` agora é sempre um objeto (letra: texto).
-- O campo `imagens` é sempre um array (mesmo que não haja imagens).
-- O campo `correta` pode ser string (única escolha) ou array (múltipla escolha).
+## Critérios de Aprovação
 
-Salve o arquivo na mesma pasta do `index.html` e ajuste o código para carregar o novo arquivo, se desejar.
+- **Nota mínima:** 65% (26 de 40 pontos).
+- **Tempo:** 60 minutos por tentativa.
+- **Questões:** 40 por simulado.
+
+## Tecnologias
+
+- HTML5, CSS3 (Tailwind CSS), JavaScript
+- LocalStorage para histórico por tipo de exame (CTFL e CTFL-AT)
+- Servidor estático recomendado: `serve` (via `npx serve` ou `npm start`)
+
+## Estrutura do Projeto
+
 ```
-{
-  "questoes": [
-    {
-      "id": "01",
-      "questao": "Qual o principal objetivo do teste de software?",
-      "alternativas": {
-        "A": "Encontrar defeitos",
-        "B": "Provar que o software não tem erros",
-        "C": "Documentar o código",
-        "D": "Acelerar o desenvolvimento",
-        "E": "Reduzir custos de infraestrutura"
-      },
-      "correta": "A",
-      "erradas": ["B", "C", "D", "E"],
-      "tipo": "Radio button",
-      "imagem": "",
-      "level": "K1"
-    },
-}
+simulador-ctfl/
+├── index.html
+├── package.json          # scripts: npm start / npx serve
+├── scripts/
+│   └── functions.js
+├── styles/
+│   ├── globals.css
+│   ├── desktop.css
+│   └── mobile.css
+├── Simulados/
+│   ├── SimuladoA (Oficial BSTQB).json
+│   ├── SimuladoB (Oficial BSTQB).json
+│   ├── SimuladoC (Oficial BSTQB).json
+│   ├── SimualdoD (Não oficial Gerado por IA).json
+│   └── CTFL-AT/
+│       └── SimuladoA.json   # 40 questões + justificativas
+└── README.md
 ```
+
+Novos simulados CTFL-AT podem ser colocados em `Simulados/CTFL-AT/` e referenciados em `scripts/functions.js` na lista `simuladosArquivosCTFLAT`. Também é possível **Importar JSON** pela interface para carregar um arquivo de questões sem alterar o código.
+
 ---
 
-## Autor Matheus Bonotto | Quality assurance
+// Este código é baseado no projeto original de Matteus Bonotto: https://github.com/matteusbonotto/simulador-ctfl
 
-Simulado CTFL para estudos da certificação Foundation Level v4.0
+// Modificado por: Jefferson Farias
+
+Simulador CTFL e CTFL-AT para estudos das certificações ISTQB Foundation Level e Agile Tester.

@@ -1,26 +1,66 @@
-const simuladosArquivos = [
-  'Simulados/SimuladoA (Oficial BSTQB).json',
-  'Simulados/SimuladoB (Oficial BSTQB).json',
-  'Simulados/SimuladoC (Oficial BSTQB).json',
-  'Simulados/SimualdoF (Inspirado no Simulado A feito por IA).json'
+// Listas de simulados por tipo de exame
+const simuladosArquivosCTFL = [
+  './Simulados/SimuladoA (Oficial BSTQB).json',
+  './Simulados/SimuladoB (Oficial BSTQB).json',
+  './Simulados/SimuladoC (Oficial BSTQB).json',
+  './Simulados/SimualdoD (Não oficial Gerado por IA).json'
+];
+
+const simuladosArquivosCTFLAT = [
+  './Simulados/CTFL-AT/SimuladoA.json'
 ];
 
 const MODO_ALEATORIO_ID = 'aleatorio_40';
-const MODO_ALEATORIO_LABEL = 'Modo Aleatório (40 questões embaralhadas dos 3 simulados)';
+const MODO_ALEATORIO_LABEL_CTFL = 'Modo Aleatório (40 questões embaralhadas dos 3 simulados)';
+const MODO_ALEATORIO_LABEL_CTFLAT = 'Modo Aleatório (40 questões embaralhadas dos simulados CTFL-AT)';
+
+function getExamType() {
+  const el = document.getElementById('examTypeSelect');
+  return el && el.value === 'ctfl-at' ? 'ctfl-at' : 'ctfl';
+}
+
+function getHistoryKey() {
+  return getExamType() === 'ctfl-at' ? 'ctfl_at_historico' : 'ctfl_historico';
+}
+
+function getSimuladosArquivos() {
+  return getExamType() === 'ctfl-at' ? simuladosArquivosCTFLAT : simuladosArquivosCTFL;
+}
+
+function updateExamTypeUI() {
+  const isCTFLAT = getExamType() === 'ctfl-at';
+  const pageTitle = document.getElementById('pageTitle');
+  if (pageTitle) {
+    pageTitle.textContent = isCTFLAT
+      ? 'Simulado CTFL-AT - Agile Tester (ISTQB)'
+      : 'Simulado CTFL v4.0 - Exame Oficial ISTQB';
+  }
+  const ctflInfo = document.getElementById('ctflInfo');
+  const ctflAtInfo = document.getElementById('ctflAtInfo');
+  if (ctflInfo) ctflInfo.classList.toggle('hidden', isCTFLAT);
+  if (ctflAtInfo) ctflAtInfo.classList.toggle('hidden', !isCTFLAT);
+  inicializarSimuladosDropdown();
+  renderHistory();
+}
 
 function inicializarSimuladosDropdown() {
   const examSelect = document.getElementById('examSelect');
+  if (!examSelect) return;
   examSelect.innerHTML = '';
   simulados = {};
-  // Adiciona opção Aleatória
-  const optAleatorio = document.createElement('option');
-  optAleatorio.value = MODO_ALEATORIO_ID;
-  optAleatorio.textContent = MODO_ALEATORIO_LABEL;
-  optAleatorio.className = 'font-bold bg-yellow-100';
-  examSelect.appendChild(optAleatorio);
-  // Adiciona os simulados normais
-  simuladosArquivos.forEach((arquivo, idx) => {
-    const nome = arquivo.replace(/^Simulados\//, '').replace(/\.json$/i, '').replace(/_/g, ' ');
+  const arquivos = getSimuladosArquivos();
+  const isCTFLAT = getExamType() === 'ctfl-at';
+  const modoAleatorioLabel = isCTFLAT ? MODO_ALEATORIO_LABEL_CTFLAT : MODO_ALEATORIO_LABEL_CTFL;
+  // Adiciona opção Aleatória apenas para CTFL (não para CTFL-AT)
+  if (!isCTFLAT && arquivos.length > 0) {
+    const optAleatorio = document.createElement('option');
+    optAleatorio.value = MODO_ALEATORIO_ID;
+    optAleatorio.textContent = modoAleatorioLabel;
+    optAleatorio.className = 'font-bold bg-yellow-100';
+    examSelect.appendChild(optAleatorio);
+  }
+  arquivos.forEach((arquivo, idx) => {
+    const nome = arquivo.replace(/^\.?\/*/, '').replace(/^Simulados\//, '').replace(/\.json$/i, '').replace(/_/g, ' ');
     const id = 'sim_' + idx;
     simulados[id] = {
       nome,
@@ -48,11 +88,9 @@ async function startQuiz() {
   const selected = document.getElementById("examSelect").value;
   if (selected === MODO_ALEATORIO_ID) {
     try {
-      const arquivos = [
-        'Simulados/SimuladoA (Oficial BSTQB).json',
-        'Simulados/SimuladoB (Oficial BSTQB).json',
-        'Simulados/SimuladoC (Oficial BSTQB).json'
-      ];
+      const arquivos = getExamType() === 'ctfl-at'
+        ? simuladosArquivosCTFLAT
+        : ['./Simulados/SimuladoA (Oficial BSTQB).json', './Simulados/SimuladoB (Oficial BSTQB).json', './Simulados/SimuladoC (Oficial BSTQB).json'];
       let todasQuestoes = [];
       for (const arquivo of arquivos) {
         const resp = await fetch(arquivo);
@@ -70,7 +108,11 @@ async function startQuiz() {
       }
       currentQuestions = todasQuestoes.slice(0, 40);
     } catch (e) {
-      alert('Erro ao carregar questões do modo aleatório: ' + e.message);
+      const msg = (e.message || '').toLowerCase();
+      const dica = (msg.includes('fetch') || msg.includes('failed'))
+        ? '\n\nDica: Use um servidor local na pasta do projeto (ex: npx serve) e acesse via http://localhost:...'
+        : '';
+      alert('Erro ao carregar questões do modo aleatório: ' + e.message + dica);
       return;
     }
   } else {
@@ -98,7 +140,11 @@ async function startQuiz() {
           }
           simulados[selected].questoes = currentQuestions;
         } catch (e) {
-          alert('Erro ao carregar questões do simulado: ' + e.message);
+          const msg = e.message || '';
+          const dica = msg.toLowerCase().includes('fetch') || msg.toLowerCase().includes('failed')
+            ? '\n\nDica: Abrir o site por file:// bloqueia o carregamento. Use um servidor local na pasta do projeto:\n  npx serve\nDepois acesse o endereço que aparecer (ex: http://localhost:3000).'
+            : '';
+          alert('Erro ao carregar questões do simulado: ' + e.message + dica);
           return;
         }
       }
@@ -263,9 +309,18 @@ function restoreUserSelection(idx) {
 // Importação de JSON para cadastrar novos simulados
 
 document.addEventListener('DOMContentLoaded', () => {
-  inicializarSimuladosDropdown();
-  renderHistory(); // exibe histórico na tela inicial
+  updateExamTypeUI(); // aplica tipo de exame (CTFL/CTFL-AT), popula simulados e histórico
   showHistory(); // garante que o histórico está visível na tela inicial
+  const examTypeSelect = document.getElementById('examTypeSelect');
+  if (examTypeSelect) {
+    examTypeSelect.addEventListener('change', () => {
+      document.getElementById('quiz').classList.add('hidden');
+      document.getElementById('result').classList.add('hidden');
+      const footer = document.getElementById('quizFooter');
+      if (footer) footer.style.display = 'none';
+      updateExamTypeUI();
+    });
+  }
   const importBtn = document.getElementById('importBtn');
   const importInput = document.getElementById('importJson');
   const examSelect = document.getElementById('examSelect');
@@ -413,6 +468,8 @@ function fixTimerHeader() {
 }
 
 function submitQuiz() {
+  // Salva a resposta da questão atual (ex.: questão 40) antes de processar o resultado
+  saveUserSelection(currentQuestionIndex);
   clearInterval(timer);
   let acertos = 0;
   let total = currentQuestions.length;
@@ -495,6 +552,11 @@ function submitQuiz() {
     html += `<div class="mt-2"><strong>Sua resposta:</strong> ${userTextos.length > 0 ? userTextos.join('<br>') : '<span class="text-gray-500">Nenhuma resposta</span>'}</div>`;
     html += `<div class="mt-2"><strong>Resposta correta:</strong> ${corretaTextos.join('<br>')}</div>`;
     html += acertou ? `<div class="text-green-700 font-bold mt-2">✔ Acertou</div>` : `<div class="text-red-700 font-bold mt-2">✘ Errou</div>`;
+    // Explicação / justificativa da resposta correta (quando existir no JSON)
+    const explicacao = (q.explicacao || q.justificativa || q.comentario || q.explanation || '').trim();
+    if (explicacao) {
+      html += `<div class="mt-3 p-3 rounded bg-blue-50 border border-blue-200"><strong class="text-blue-800">Por quê?</strong><p class="mt-1 text-sm text-gray-800">${explicacao}</p></div>`;
+    }
     html += `</div>`;
   });
   const nota = Math.round((acertos / total) * 100);
@@ -511,10 +573,10 @@ function submitQuiz() {
   };
   let historico = [];
   try {
-    historico = JSON.parse(localStorage.getItem('ctfl_historico') || '[]');
+    historico = JSON.parse(localStorage.getItem(getHistoryKey()) || '[]');
   } catch {}
   historico.unshift(tentativa);
-  localStorage.setItem('ctfl_historico', JSON.stringify(historico.slice(0, 10)));
+  localStorage.setItem(getHistoryKey(), JSON.stringify(historico.slice(0, 10)));
   renderHistory();
   setTimeout(() => {
     alert(`${aprovado ? '✅ Parabéns, você foi APROVADO!' : '❌ Você NÃO foi aprovado.'}\n\nAcertos: ${acertos}\nErros: ${erros}\nNota: ${nota}%`);
@@ -532,7 +594,7 @@ function submitQuiz() {
 function renderHistory() {
   let historico = [];
   try {
-    historico = JSON.parse(localStorage.getItem('ctfl_historico') || '[]');
+    historico = JSON.parse(localStorage.getItem(getHistoryKey()) || '[]');
   } catch {}
   const ul = document.getElementById('historyList');
   if (!ul) return;
@@ -550,7 +612,7 @@ function renderHistory() {
 function showGabarito(idx) {
   let historico = [];
   try {
-    historico = JSON.parse(localStorage.getItem('ctfl_historico') || '[]');
+    historico = JSON.parse(localStorage.getItem(getHistoryKey()) || '[]');
   } catch {}
   const tentativa = historico[idx];
   if (!tentativa || !tentativa.gabarito) return;
@@ -592,10 +654,10 @@ function showGabarito(idx) {
 }
 
 // Exporta o gabarito para arquivo JSON
-function exportGabarito(idx) {
+function exportGabaritoJSON(idx) {
   let historico = [];
   try {
-    historico = JSON.parse(localStorage.getItem('ctfl_historico') || '[]');
+    historico = JSON.parse(localStorage.getItem(getHistoryKey()) || '[]');
   } catch {}
   const tentativa = historico[idx];
   if (!tentativa || !tentativa.gabarito) return;
@@ -635,7 +697,7 @@ function exportGabarito(idx) {
   }
   let historico = [];
   try {
-    historico = JSON.parse(localStorage.getItem('ctfl_historico') || '[]');
+    historico = JSON.parse(localStorage.getItem(getHistoryKey()) || '[]');
   } catch {}
   const tentativa = historico[idx];
   if (!tentativa || !tentativa.gabarito) return;
@@ -643,7 +705,8 @@ function exportGabarito(idx) {
   let y = 15;
   doc.setFontSize(16);
   doc.setTextColor(33, 37, 41);
-  doc.text(`Gabarito CTFL - ${tentativa.data}`, 10, y);
+  const tituloGabarito = getExamType() === 'ctfl-at' ? 'CTFL-AT' : 'CTFL';
+  doc.text(`Gabarito ${tituloGabarito} - ${tentativa.data}`, 10, y);
   y += 10;
   doc.setFontSize(12);
   doc.setTextColor(33, 37, 41);

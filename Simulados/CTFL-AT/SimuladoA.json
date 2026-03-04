@@ -1,0 +1,608 @@
+{
+  "questoes": [
+    {
+      "id": "01",
+      "questao": "O Manifesto Ágil tem 4 declarações de valores. Combine o valor ágil à esquerda (1-4) com seu equivalente tradicional à direita (a-d). (1) Colaboração do cliente sobre (2) Respondendo à mudança (3) Indivíduos e interações sobre (4) Software de trabalho sobre (a) Processos e ferramentas (b) Seguindo um plano (c) Negociação de contratos (d) Documentação abrangente",
+      "alternativas": {
+        "A": "1c, 2d, 3b, 4a",
+        "B": "1c, 2b, 3a, 4d",
+        "C": "1d, 2b, 3a, 4c",
+        "D": "1b, 2c, 3d, 4a"
+      },
+      "correta": "B",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K1",
+      "explicacao": "O Manifesto consiste em 4 valores-chave: Indivíduos e interações sobre processos e ferramentas; Software de trabalho sobre documentação abrangente; Colaboração do cliente sobre negociação de contratos; Resposta a mudanças seguindo um plano."
+    },
+    {
+      "id": "02",
+      "questao": "Qual das seguintes afirmações reflete melhor um dos valores do Manifesto Ágil?",
+      "alternativas": {
+        "A": "O software de trabalho permite que o cliente forneça feedback rápido ao desenvolvedor.",
+        "B": "Os desenvolvedores devem usar ferramentas de teste unitário para apoiar o processo de teste.",
+        "C": "Os representantes comerciais devem fornecer um backlog de histórias de usuários e suas estimativas para a equipe.",
+        "D": "A adoção de planos de mudança não agrega nenhum valor real a um projeto ágil."
+      },
+      "correta": "A",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K1",
+      "explicacao": "Do ponto de vista do cliente, o software de trabalho é muito mais útil e valioso do que uma documentação excessivamente detalhada, e proporciona uma oportunidade de fornecer à equipe de desenvolvimento um feedback rápido."
+    },
+    {
+      "id": "03",
+      "questao": "Quais as duas atividades abaixo que melhor representam as responsabilidades que são consistentes com a abordagem de toda a equipe de desenvolvimento ágil?",
+      "alternativas": {
+        "A": "Os testadores são responsáveis pelo desenvolvimento de testes unitários que passam para os desenvolvedores para testes",
+        "B": "Os representantes comerciais devem selecionar as ferramentas que a equipe utilizará durante o projeto",
+        "C": "Os testadores devem trabalhar com os representantes dos clientes para criar testes de aceite",
+        "D": "Toda a equipe, e não apenas os testadores, tem a responsabilidade pela qualidade do produto",
+        "E": "Espera-se que os desenvolvedores testem requisitos não-funcionais (desempenho, usabilidade, segurança etc.)"
+      },
+      "correta": ["C", "D"],
+      "tipo": "Checkbox",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "C) Os testadores apoiam e colaboram com os representantes comerciais para criarem testes de aceite adequados. D) Em projetos ágeis, a qualidade é de responsabilidade de toda a equipe."
+    },
+    {
+      "id": "04",
+      "questao": "Qual dos seguintes aspectos é uma vantagem de ter toda a equipe responsável pela qualidade?",
+      "alternativas": {
+        "A": "As empresas não precisam mais recrutar e treinar especialistas em testes de software.",
+        "B": "As tarefas de automação de testes são agora da responsabilidade da equipe de desenvolvimento, ao invés da equipe de testes.",
+        "C": "As barreiras de papel são eliminadas e os membros da equipe contribuem para o sucesso do projeto com base em suas habilidades e perspectivas únicas.",
+        "D": "Os custos do projeto são menores porque a necessidade de uma equipe de teste especializada é eliminada."
+      },
+      "correta": "C",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "Permite que uma variedade de habilidades seja alavancada conforme necessário para o projeto."
+    },
+    {
+      "id": "05",
+      "questao": "Quais das seguintes afirmações são verdadeiras? (1) O feedback antecipado dá aos desenvolvedores mais tempo para desenvolver novos recursos do sistema porque eles gastam menos tempo reformulando os recursos esperados nas iterações anteriores. (2) O feedback antecipado permite que as equipes ágeis forneçam recursos com o maior valor comercial primeiro, porque o cliente mantém o foco nos recursos com o maior valor do sistema. (3) O feedback antecipado reduz os custos porque diminui a quantidade de tempo necessária para testes do sistema. (4) O feedback antecipado torna mais provável que o sistema construído seja o que o cliente desejava porque lhe é dada a oportunidade de fazer mudanças durante todo o processo de desenvolvimento do produto.",
+      "alternativas": {
+        "A": "1 e 4",
+        "B": "2 e 3",
+        "C": "2 e 4",
+        "D": "1 e 3"
+      },
+      "correta": "C",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "(2) CORRETO: O constante feedback dos clientes mantém o foco nas características com o maior valor comercial. (4) CORRETO: Os clientes indicam se os requisitos não foram atendidos ou foram mal interpretados, e modificam a funcionalidade se assim desejarem."
+    },
+    {
+      "id": "06",
+      "questao": "Qual dos seguintes aspectos é um benefício do processo ágil que promove um feedback precoce e frequente?",
+      "alternativas": {
+        "A": "O número total de defeitos encontrados durante o projeto é muito maior do que nos projetos tradicionais de desenvolvimento de software, tais como a queda d'água.",
+        "B": "Há menos retrabalho porque os clientes veem o produto regularmente.",
+        "C": "É fácil determinar o desenvolvedor que introduz mais defeitos ao integrar o código.",
+        "D": "Há tempo suficiente para completar todas as características programadas para a iteração em questão."
+      },
+      "correta": "B",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "Esclarecer os pedidos de recursos do cliente, cedo e regularmente ao longo do desenvolvimento, torna mais provável que os recursos-chave estejam disponíveis mais cedo e que o produto reflita melhor o que o cliente deseja."
+    },
+    {
+      "id": "07",
+      "questao": "Combine as seguintes abordagens ágeis de desenvolvimento de software na parte superior com suas descrições correspondentes na parte inferior. (1) Programação Extrema (2) Scrum (3) Kanban (a) Abraça 5 valores para orientar o desenvolvimento: Comunicação, Simplicidade, Feedback, Coragem e Respeito (b) Divide-se o projeto em pequenas iterações chamadas sprints. (c) Otimiza o 'fluxo' de trabalho em uma cadeia de valor agregado.",
+      "alternativas": {
+        "A": "1a, 2c, 3b",
+        "B": "1a, 2b, 3c",
+        "C": "1a, 2c, 3b",
+        "D": "1c, 2b, 3a"
+      },
+      "correta": "B",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K1",
+      "explicacao": "O XP abraça 5 valores: Comunicação, Simplicidade, Feedback, Coragem e Respeito. O Scrum divide o projeto em pequenas iterações chamadas sprints. O Kanban não tem iterações; é usado para otimizar o fluxo contínuo de tarefas."
+    },
+    {
+      "id": "08",
+      "questao": "Durante uma reunião de planejamento de iteração, a equipe está compartilhando suas ideias sobre uma história de usuário. O proprietário do produto aconselha que o cliente deve ter uma tela para inserir informações. O desenvolvedor explica que existem limitações técnicas para o recurso, devido à quantidade de informação necessária para ser capturada na tela. Outro desenvolvedor diz que há riscos sobre o desempenho, pois as informações serão armazenadas em um banco de dados externo. Qual dos itens a seguir representaria melhor a contribuição de um testador para esta discussão?",
+      "alternativas": {
+        "A": "O testador avisa que a tela da história do usuário precisa ser uma única página para reduzir o esforço de automatização do teste.",
+        "B": "O testador aconselha que a usabilidade é mais importante do que o desempenho.",
+        "C": "O testador aconselha que o critério de aceite de desempenho deve ser o padrão máximo de 1 segundo para armazenamento de dados.",
+        "D": "O testador aconselha que a história do usuário precisa de critérios de aceite para poder ser testada."
+      },
+      "correta": "D",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K3",
+      "explicacao": "O testador contribui assegurando que a equipe crie critérios de aceite para a história do usuário, para que ela possa ser testada."
+    },
+    {
+      "id": "09",
+      "questao": "Qual dos seguintes MELHORES descreve um testador que participa de uma reunião retrospectiva?",
+      "alternativas": {
+        "A": "Como um testador participando de uma reunião retrospectiva, eu deveria trazer tópicos que estão relacionados apenas a testes. Todos os outros tópicos serão abordados por diferentes participantes.",
+        "B": "Como um testador, participo de uma reunião retrospectiva como observador, assegurando que a reunião siga as regras retrospectivas e os valores ágeis.",
+        "C": "Como testador, participo de uma reunião retrospectiva, devo fornecer feedback e sugestões sobre todas as atividades conduzidas pela equipe durante o sprint.",
+        "D": "Como testador, só devo assistir e participar de uma reunião retrospectiva se eu tiver qualquer feedback e contribuição relacionados às atividades conduzidas pela equipe durante o sprint."
+      },
+      "correta": "C",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "Todos os membros da equipe, tanto testadores quanto não testadores, podem fornecer feedback e sugestões sobre todas as atividades conduzidas pela equipe durante o sprint."
+    },
+    {
+      "id": "10",
+      "questao": "Qual dos seguintes itens NÃO deve ser levantado durante uma reunião retrospectiva?",
+      "alternativas": {
+        "A": "Deve haver mais ênfase em testes unitários no futuro, para melhorar a qualidade geral.",
+        "B": "O processo de construção é manual e leva muito tempo. A pesquisa e a implementação de uma estrutura de construção automatizada devem ser feitas.",
+        "C": "O Testador XYZ está lutando para encontrar defeitos. É necessário treinamento de projeto de teste para este recurso.",
+        "D": "Os conjuntos de testes de regressão automatizada estão demorando muito para serem executados. Uma revisão dos testes, para eliminar testes redundantes ou desnecessários, é necessária."
+      },
+      "correta": "C",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "A reunião retrospectiva não se destina a destacar indivíduos, mas a focar em melhorias do processo e na equipe como um todo."
+    },
+    {
+      "id": "11",
+      "questao": "Qual dos seguintes aspectos NÃO é um princípio de integração contínua?",
+      "alternativas": {
+        "A": "A integração contínua ajuda a construir software alterado regularmente, incluindo testes e implantação, de forma automatizada.",
+        "B": "A integração contínua permite que novas construções estejam disponíveis com frequência para os testadores e partes interessadas.",
+        "C": "A integração contínua ajuda a identificar novos defeitos de integração antecipadamente e torna a análise desses defeitos mais fácil.",
+        "D": "A integração contínua garante que os testes de builds sejam feitos manualmente, pois isso gera resultados mais confiáveis do que os scripts automatizados."
+      },
+      "correta": "D",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "Os testes devem ser automatizados no nível da unidade e da integração para permitir um rápido feedback sobre a qualidade da construção. A integração contínua não exige testes manuais."
+    },
+    {
+      "id": "12",
+      "questao": "Quais das seguintes atividades um testador faria durante o planejamento de liberação?",
+      "alternativas": {
+        "A": "Produzir uma lista de testes de aceite para histórias de usuários",
+        "B": "Ajuda a decompor as histórias dos usuários em tarefas menores e mais detalhadas.",
+        "C": "Estimar tarefas de teste geradas por novos recursos planejados para esta iteração.",
+        "D": "Apoiar o esclarecimento das histórias de usuários e garantir que elas sejam testáveis."
+      },
+      "correta": "D",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K1",
+      "explicacao": "Apoiar o esclarecimento das histórias de usuários e garantir que sejam testáveis é atividade do testador durante o planejamento de liberação."
+    },
+    {
+      "id": "13",
+      "questao": "Qual é a explicação mais apropriada de uma \"história de usuário\"?",
+      "alternativas": {
+        "A": "Um artefato que o testador deve rever e assinar antes do início dos testes.",
+        "B": "Um artefato usado para detalhar apenas os requisitos funcionais do sistema.",
+        "C": "Um artefato documentado por representantes comerciais para ajudar os desenvolvedores e testadores a entender os requisitos do sistema.",
+        "D": "Um artefato escrito colaborativamente por desenvolvedores, testadores e representantes comerciais para capturar as exigências."
+      },
+      "correta": "D",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K1",
+      "explicacao": "Em ambiente ágil, as histórias de usuários são escritas colaborativamente por desenvolvedores, testadores e representantes comerciais para capturar as exigências, usando técnicas como brainstorming e mapeamento mental."
+    },
+    {
+      "id": "14",
+      "questao": "Qual das seguintes atividades de teste é normalmente realizada durante projetos ágeis, mas não é tão comum em projetos tradicionais?",
+      "alternativas": {
+        "A": "Os testadores escrevem planos de teste detalhados para que todos os membros da equipe possam entender o que será testado durante cada iteração.",
+        "B": "Os testadores estão fortemente envolvidos na criação de casos de testes automatizados que são então utilizados para verificar a implementação dos requisitos.",
+        "C": "Os testadores decidem os critérios de entrada e saída para cada nível de teste.",
+        "D": "Os testadores estão envolvidos no desenvolvimento para entender melhor o que precisa ser testado."
+      },
+      "correta": "B",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "A automação de testes em todos os níveis (integração, sistema, aceite) ocorre em muitas equipes ágeis. Em projetos tradicionais não é tão comum o mesmo foco na automação desde cedo."
+    },
+    {
+      "id": "15",
+      "questao": "Considere as seguintes atividades: (1) Aplicação estrita dos critérios de entrada e saída do nível de teste do sistema. (2) Colaboração entre o testador, o desenvolvedor e stakeholders do negócio para definir os critérios de aceite. (3) Teste de verificação funcional das histórias de usuários desenvolvidas na iteração anterior. Qual das seguintes combinações destas atividades deve ocorrer em um projeto ágil?",
+      "alternativas": {
+        "A": "2",
+        "B": "1, 2",
+        "C": "2, 3",
+        "D": "3"
+      },
+      "correta": "A",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "A colaboração entre testador, desenvolvedor e representante comercial para definir os critérios de aceite é o que define quando uma característica está \"feita\" em projeto ágil. Critérios rígidos de entrada/saída por nível são mais típicos de ciclos de vida tradicionais."
+    },
+    {
+      "id": "16",
+      "questao": "Quais as duas declarações verdadeiras sobre projetos ágeis?",
+      "alternativas": {
+        "A": "Os testadores devem trabalhar em estreita colaboração com desenvolvedores, mantendo uma perspectiva objetiva.",
+        "B": "Não existem gerentes de testes em organizações que fazem desenvolvimento ágil.",
+        "C": "Não há diferença entre o que os testadores e desenvolvedores fazem em projetos ágeis.",
+        "D": "Os desenvolvedores devem contar com os testadores para criar os testes de regressão automatizados.",
+        "E": "Uma seleção de usuários pode realizar testes beta no produto após a conclusão de uma série de iterações."
+      },
+      "correta": ["A", "E"],
+      "tipo": "Checkbox",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "A) Os testadores trabalham em estreita colaboração com desenvolvedores mantendo perspectiva objetiva — marca de projetos ágeis. E) Equipes ágeis podem empregar testes beta com seleção de usuários após uma série de iterações."
+    },
+    {
+      "id": "17",
+      "questao": "Qual das seguintes declarações sobre testes independentes em projetos ágeis é FALSO?",
+      "alternativas": {
+        "A": "Pode haver o risco de perder a independência dos testes para organizações que introduzem o ágil.",
+        "B": "Os testadores independentes encontrarão mais defeitos que desenvolvedores, independentemente do nível de teste.",
+        "C": "Os testes independentes podem ser introduzidos ao final de um sprint.",
+        "D": "A equipe de teste independente pode fazer parte de outra equipe."
+      },
+      "correta": "B",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "É falsa: os testadores independentes podem encontrar mais defeitos que desenvolvedores dependendo do nível de teste e da experiência, mas não \"independentemente do nível de teste\"."
+    },
+    {
+      "id": "18",
+      "questao": "Em um projeto ágil, qual dos itens a seguir denota melhor a qualidade do produto no final da iteração 6 de um novo lançamento de sistema que consiste em 8 iterações?",
+      "alternativas": {
+        "A": "Não foram detectados defeitos de gravidade 1 ou 2 durante os testes do sistema da iteração 6, o que permitiu que as equipes passassem para a iteração 7.",
+        "B": "Os resultados de um teste beta do cliente na versão de software da iteração 6 indicam que o sistema funciona corretamente e que melhorou a produtividade.",
+        "C": "A equipe ágil tem rastreado com sucesso as estimativas, com variações limitadas mostradas nos gráficos queimados para todas as iterações até o momento.",
+        "D": "Todos os cartões de histórias no escopo de cada iteração, até a iteração atual, foram marcados como \"Feito\", mas com alguma dívida técnica sendo incorrida."
+      },
+      "correta": "B",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "O feedback positivo do cliente e o software de trabalho são indicadores chave da qualidade do produto. Gráficos queimados e histórias \"Feito\" indicam velocidade, não qualidade em si."
+    },
+    {
+      "id": "19",
+      "questao": "Qual dos seguintes é o melhor para mostrar o progresso da equipe em relação às estimativas?",
+      "alternativas": {
+        "A": "Gráficos queimados",
+        "B": "Registros de automação",
+        "C": "O ágil quadro de tarefas mostrando a história do usuário e o progresso das tarefas",
+        "D": "Ferramentas de rastreamento de defeitos"
+      },
+      "correta": "A",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "Os gráficos queimados mostram o progresso planejado e o real das histórias dos usuários em relação às estimativas e à data de lançamento."
+    },
+    {
+      "id": "20",
+      "questao": "A empresa aconselha, durante o planejamento da iteração 5, que eles requerem mudanças no sistema entregue na iteração 3. Das seguintes atividades, o que precisaria ser feito primeiro para minimizar a introdução do risco de regressão quando este recurso for alterado?",
+      "alternativas": {
+        "A": "Rever e atualizar todos os testes manuais e automatizados impactados por esta mudança para atender aos novos critérios de aceite.",
+        "B": "Escrever novos testes manuais e automatizados para o recurso e adicioná-los ao conjunto de testes de regressão.",
+        "C": "Automatizar todos os casos de teste da iteração anterior e adicioná-los à suíte de testes de regressão automatizada.",
+        "D": "Aumentar a quantidade de automação de testes ao redor do sistema para incluir condições de teste mais detalhadas."
+      },
+      "correta": "A",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "Como o recurso já foi entregue, é necessário rever e atualizar todos os testes impactados para os novos critérios de aceite primeiro, evitando falsos negativos, antes de definir novos testes."
+    },
+    {
+      "id": "21",
+      "questao": "Quais das seguintes razões são essenciais para que a automação seja essencial dentro de projetos ágeis? (1) Para que as equipes mantenham ou aumentem sua velocidade (2) Para evitar que a equipe de teste fique entediada com tarefas manuais e repetitivas (3) Para testar novamente todos os casos de teste de iterações anteriores (4) Para eliminar a regressão no produto devido à alta rotatividade do código (5) Para garantir que as mudanças de código não interrompam a construção do software",
+      "alternativas": {
+        "A": "1, 4",
+        "B": "1, 5",
+        "C": "3, 5",
+        "D": "2, 5"
+      },
+      "correta": "B",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "(1) Cada iteração exige mais testes de regressão; sem automação a velocidade da equipe cairia. (5) A automação ligada à integração contínua indica se o novo código quebra a construção."
+    },
+    {
+      "id": "22",
+      "questao": "Em projetos ágeis, há mais necessidade de que os testadores entendam e desenvolvam scripts de automação de testes do que em projetos tradicionais. Entre os seguintes: (1) Os requisitos mudam diariamente e têm que ser testados por regressão. Esta mudança rápida requer testes automatizados porque os testes manuais são muito lentos. (2) Os testes devem gerar feedback sobre a qualidade do produto o mais cedo possível. Portanto, todos os testes de aceite devem ser executados em cada iteração, idealmente à medida que forem feitas modificações. Na prática, isso só pode ser realizado através de testes automatizados. (3) A Prática de Teste-Primeiro e Integração Contínua exige que o conjunto de teste de regressão seja executado sempre que o código alterado for verificado. Na prática, isso só pode ser realizado por testes automatizados. (4) Iterações ou sprints são de comprimento fixo. A equipe tem que garantir que todos os testes possam ser completamente executados no último dia de cada iteração/sprint. Na prática, isso só pode ser realizado através de testes automatizados. (5) Os projetos ágeis dependem de testes unitários e não de testes de sistemas. Como os testes unitários não podem ser executados manualmente, todos os testes têm que ser automatizados. Quais são as razões pelas quais esta é uma habilidade necessária em projetos ágeis?",
+      "alternativas": {
+        "A": "1, 3",
+        "B": "2, 5",
+        "C": "4, 5",
+        "D": "2, 3"
+      },
+      "correta": "D",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "(2) Os testes devem gerar feedback cedo; na prática isso exige automação. (3) Teste-Primeiro e Integração Contínua exigem que o conjunto de regressão seja executado a cada check-in; na prática só é viável com automação."
+    },
+    {
+      "id": "23",
+      "questao": "Que tarefas são normalmente esperadas de um testador em um projeto ágil? (1) decidir sobre o aceite do usuário (2) projetar, criar e executar testes apropriados (3) programar relatórios de defeitos para análise (4) automatizar e manter os testes (5) melhorar a lógica do programa por programação em pares",
+      "alternativas": {
+        "A": "1, 3",
+        "B": "2, 3",
+        "C": "2, 4",
+        "D": "2, 5"
+      },
+      "correta": "C",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "Projetar, criar e executar testes e automatizar/mantê-los são tarefas esperadas do testador ágil. Decidir aceite é da equipe; agendar relatórios de defeitos e programação em pares não são típicos do testador."
+    },
+    {
+      "id": "24",
+      "questao": "Qual das seguintes tarefas NÃO é uma tarefa típica realizada pelo testador dentro de uma equipe ágil?",
+      "alternativas": {
+        "A": "Automatizar os testes e mantê-los",
+        "B": "Para orientar e treinar outros membros da equipe",
+        "C": "Produzir e atualizar gráficos queimados",
+        "D": "Participar das atividades de análise de código"
+      },
+      "correta": "C",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "Produzir e atualizar o gráfico queimado é papel do Scrum Master (ou equivalente), a partir das informações da equipe. Não é tarefa típica do testador."
+    },
+    {
+      "id": "25",
+      "questao": "O termo \"burndown\" se refere a qual dos seguintes termos?",
+      "alternativas": {
+        "A": "Um gráfico mostrando quais membros da equipe estão trabalhando mais, e é provável que estejam sob estresse",
+        "B": "Um gráfico mostrando o progresso de cada história de usuário, e quando é provável que elas sejam completadas",
+        "C": "Um gráfico mostrando a quantidade de trabalho restante a ser feito, versus o tempo alocado para a iteração",
+        "D": "Um gráfico mostrando os defeitos corrigidos, e quando os defeitos restantes são susceptíveis de serem corrigidos"
+      },
+      "correta": "C",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K1",
+      "explicacao": "O gráfico queimado (burndown) mostra a quantidade de trabalho restante versus o tempo alocado para a iteração."
+    },
+    {
+      "id": "26",
+      "questao": "Qual das seguintes declarações sobre o TDD é FALSA?",
+      "alternativas": {
+        "A": "TDD é uma abordagem de \"teste primeiro\" para desenvolver testes automatizados reutilizáveis",
+        "B": "O ciclo TDD é utilizado continuamente até que o produto de software seja lançado",
+        "C": "TDD ajuda a documentar o código para futuros esforços de manutenção",
+        "D": "O resultado do TDD são classes de teste utilizadas pelo desenvolvedor para desenvolver casos de teste"
+      },
+      "correta": "D",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K1",
+      "explicacao": "A opção D é FALSA: o resultado do TDD são testes automatizados que guiam o desenvolvimento do código. A descrição de \"classes de teste para desenvolver casos de teste\" refere-se a BDD, não TDD."
+    },
+    {
+      "id": "27",
+      "questao": "A que o termo \"Pirâmide de Teste\" se refere e ilustra situações?",
+      "alternativas": {
+        "A": "A carga de trabalho de teste da equipe aumenta de sprint para sprint",
+        "B": "O tamanho do backlog e, portanto, o número de testes, diminui",
+        "C": "O número de testes unitários automatizados é maior do que o número de testes automatizados para níveis de teste mais elevados",
+        "D": "O número de testes automatizados em vigor aumenta de sprint para sprint"
+      },
+      "correta": "C",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K1",
+      "explicacao": "A pirâmide de testes enfatiza ter mais testes automatizados nos níveis inferiores (ex.: unitários) e número decrescente nos níveis superiores (sistema, aceite)."
+    },
+    {
+      "id": "28",
+      "questao": "Qual dos seguintes demonstra o uso eficaz dos quadrantes de teste?",
+      "alternativas": {
+        "A": "Ao comunicar as ideias do teste, o testador pode se referir ao quadrante de teste correspondente, para que o resto da equipe entenda melhor o propósito do teste.",
+        "B": "O testador pode usar os tipos de testes descritos nos quadrantes de teste como uma métrica de cobertura, quanto mais testes forem cobertos de cada quadrante, maior será a cobertura do teste.",
+        "C": "A equipe deve escolher um número de testes esperados de cada quadrante, e o testador deve projetar e executar esses testes para garantir que todos os níveis e tipos de testes foram executados.",
+        "D": "O testador pode usar os quadrantes de teste durante a análise de risco; os quadrantes de nível inferior representam menor risco para o cliente."
+      },
+      "correta": "A",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "Os quadrantes de teste podem ser usados como auxílio para comunicar os tipos e o propósito dos testes ao resto da equipe."
+    },
+    {
+      "id": "29",
+      "questao": "Dadas as seguintes histórias de usuários: \"Como caixa de banco, posso navegar facilmente pelo menu e links do sistema, e encontrar as informações que estou procurando\". \"Para todos os usuários, o sistema deve exibir todas as consultas em menos de 2 segundos, 90% do tempo\". E os casos de teste associados: TC1: Login como caixa de banco. Digite a identificação do cliente. Verifique se o histórico de transações do cliente é fácil de encontrar, e se a navegação através dos menus é intuitiva. TC2: Login como caixa de banco: Digite o nome do cliente. Verifique se as contas do cliente são fáceis de encontrar e se a navegação através dos menus é intuitiva. TC3: Simular o tráfego esperado no sistema e validar que o tempo de exibição do histórico de transações do cliente seja inferior a 2 segundos. Em quais quadrantes de teste os casos de teste acima fariam parte?",
+      "alternativas": {
+        "A": "Q1: nível de unidade, sobre tecnologia; Q2: nível de sistema sobre negócios",
+        "B": "Q2: nível do sistema, nível de aceite do sistema ou do usuário; Q3: nível de aceite do sistema ou do usuário, nível de aceite do negócio",
+        "C": "Q3: nível de aceite do sistema ou do usuário, sobre negócio; Q4: nível de aceite do sistema ou da operação, sobre tecnologia",
+        "D": "Q2: nível do sistema, sobre negócios; Q4: nível de aceite do sistema ou operação, sobre tecnologia"
+      },
+      "correta": "C",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "Os testes de usabilidade (TC1, TC2) fazem parte do Q3 (aceite do sistema/usuário, sobre negócio). O teste de desempenho (TC3) faz parte do Q4 (aceite do sistema/operação, sobre tecnologia)."
+    },
+    {
+      "id": "30",
+      "questao": "No início da 5ª iteração de um projeto, uma nova exigência foi introduzida para suportar um novo tipo de navegador. O testador percebe que a estrutura e os scripts de automação de testes existentes não suportarão o novo tipo de navegador. Qual é o melhor curso de ação a ser seguido pelo testador desta equipe?",
+      "alternativas": {
+        "A": "O testador deve notificar a equipe que está planejando trabalhar horas extras durante os próximos 2 sprints a fim de atualizar a estrutura de automação de testes e os scripts existentes para suportar o novo tipo de navegador de modo a não perturbar o plano de sprint existente.",
+        "B": "O testador notificará a equipe sobre a questão. Uma análise de risco é feita e a equipe decide que o teste de regressão deve ser realizado no novo tipo de navegador, além dos outros navegadores suportados. O testador atualizará o plano de sprint adicionando tarefas para modificar a estrutura e os scripts para suportar o novo tipo de navegador.",
+        "C": "O testador faz algumas pesquisas e conclui que o risco é baixo de que quaisquer novos defeitos sejam introduzidos no novo tipo de navegador que ainda não tenham sido encontrados em outros navegadores suportados. O testador continua com o plano de sprint existente e não faz nenhuma alteração na estrutura ou nos scripts de automação de testes.",
+        "D": "O testador interromperá o que está fazendo, projetará testes específicos para testar a compatibilidade do novo tipo de navegador e comunicará à equipe que qualquer outro trabalho de teste para o sprint terá que ser empurrado para a próxima iteração."
+      },
+      "correta": "B",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K3",
+      "explicacao": "A decisão deve ser colaborativa com a equipe. O testador notifica o problema, a equipe faz análise de risco e decide; o testador então atualiza o plano de sprint com as tarefas necessárias."
+    },
+    {
+      "id": "31",
+      "questao": "Dados os seguintes resultados de uma análise de risco do produto que ocorreu no início de uma iteração: História do usuário 1 (Desempenho): probabilidade: alta, impacto: alto; História do usuário 2 (Segurança): probabilidade: alta, impacto: alto; História do usuário 3 (Funcional): probabilidade: média, impacto: alto; História do usuário 4 (Funcional): probabilidade: alta, impacto: médio; História do usuário 5 (Compatibilidade): probabilidade: baixa, impacto: baixa; História do usuário 6 (Recuperabilidade): probabilidade: baixa, impacto: baixa. Quais as duas informações melhor descrevem o que a equipe deve fazer com essas informações?",
+      "alternativas": {
+        "A": "Passar ao planejamento da sessão de pôquer para estimar o esforço para as histórias dos usuários e determinar o que pode ser feito na iteração atual, e o que precisa ser adicionado ao acúmulo.",
+        "B": "Remover as histórias de usuários 5 e 6 da iteração atual e passar para uma iteração posterior.",
+        "C": "Devido ao número de probabilidades altas, os riscos de alto impacto que se apresentam para esta iteração, a equipe não tem outra escolha senão prolongar o prazo da iteração por 2 semanas.",
+        "D": "A equipe deve colaborar em maneiras eficazes para mitigar a alta probabilidade, os riscos de alto impacto.",
+        "E": "A equipe deve planejar completar todos os itens no sprint atual, mas salvar os itens de menor risco para o final do sprint, e somente testar estes itens se houver tempo."
+      },
+      "correta": ["A", "D"],
+      "tipo": "Checkbox",
+      "imagens": [],
+      "level": "K3",
+      "explicacao": "A) As informações de risco são usadas no planejamento de pôquer para estimar esforço e decidir o que cabe na iteração. D) A equipe deve colaborar para mitigar riscos de alta probabilidade e alto impacto."
+    },
+    {
+      "id": "32",
+      "questao": "Dada a seguinte história de usuário: \"Como presidente, qualquer dado que eu carrego não deve ser visualizado por nenhum outro usuário do sistema\". Durante a primeira sessão de planejamento de pôquer, os seguintes pontos da história foram dados com base no risco, esforço, complexidade e extensão adequada dos testes: Clientes: 5; Desenvolvedores: 5; Testadores: 20. Qual é o melhor resultado após esta sessão de planejamento?",
+      "alternativas": {
+        "A": "Como as estimativas de tamanho do cliente e do desenvolvedor coincidem, a equipe pode estar confiante de que esta estimativa é boa e deve passar para a próxima história do usuário.",
+        "B": "A equipe deve manter uma conversa para entender por que os testadores acharam que esta história de usuário foi significativamente mais trabalhosa. Outra rodada do planejamento da sessão de pôquer deve ocorrer após essa discussão.",
+        "C": "Como o cliente é o proprietário do sistema no final, as estimativas dos clientes devem ser consideradas corretas quando houver um conflito.",
+        "D": "As sessões de planejamento do pôquer devem continuar até que todos os pontos estimados da história sejam uma correspondência exata entre clientes, desenvolvedores e testadores."
+      },
+      "correta": "B",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K3",
+      "explicacao": "Quando há divergência (clientes e devs 5, testadores 20), a equipe deve discutir para entender por que os testadores consideraram a história mais trabalhosa — por exemplo, esforço de teste para segurança — e fazer nova rodada de planejamento de pôquer."
+    },
+    {
+      "id": "33",
+      "questao": "Uma equipe ágil é designada para um projeto de atualização de um dispositivo médico existente para tecnologias mais novas. Desde o último lançamento do dispositivo médico existente, uma nova versão do padrão do dispositivo médico foi lançada. O acesso do usuário ao dispositivo está mudando e será documentado em histórias de usuários. Com base nestas informações, e além das histórias de usuários, qual das seguintes informações seria a melhor para apoiar suas atividades de teste? (1) Versão atualizada do documento de padrões para o sistema médico. (2) Defeitos existentes ou áreas típicas de defeitos no sistema existente. (3) Casos de teste de acesso obsoleto do usuário e resultados para a aplicação existente. (4) Métricas de desempenho para a aplicação existente. (5) Defeitos registrados durante outros projetos de conversão similares para dispositivos médicos.",
+      "alternativas": {
+        "A": "1, 2, 3, 4",
+        "B": "2, 4, 5",
+        "C": "1, 2, 5",
+        "D": "Todos os itens acima"
+      },
+      "correta": "C",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K3",
+      "explicacao": "(1) Padrão atualizado é útil para adaptar casos de teste. (2) Defeitos/áreas típicas de defeitos ajudam na análise de risco. (3) Casos de acesso obsoleto não ajudam pois o acesso está mudando. (4) Métricas do sistema antigo não se aplicam à nova tecnologia. (5) Defeitos de projetos similares ajudam na análise de risco."
+    },
+    {
+      "id": "34",
+      "questao": "Qual alternativa é a MELHOR descrição de quando parar de testar (critério de liberação) em um projeto ágil?",
+      "alternativas": {
+        "A": "Todos os casos de teste foram executados",
+        "B": "A probabilidade de falhas remanescentes foi reduzida a um nível que pode ser aceito pelo cliente",
+        "C": "A cobertura de teste alcançada é considerada suficiente. O limite de cobertura é justificado pela complexidade da funcionalidade incluída, sua implementação e os riscos envolvidos.",
+        "D": "A iteração/sprint está terminada"
+      },
+      "correta": "C",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "A cobertura de teste alcançada, justificada pela complexidade, implementação e riscos — junto com informações sobre defeitos e gravidade — fornece base para a decisão de liberação. Não basta \"todos os casos executados\" ou \"fim da iteração\"."
+    },
+    {
+      "id": "35",
+      "questao": "Quais são dois exemplos de critérios de aceite verificáveis para atividades relacionadas a testes?",
+      "alternativas": {
+        "A": "Testes baseados em estrutura: São utilizados testes caixa-branca, além dos testes caixa-preta.",
+        "B": "Teste de sistema: Pelo menos 80% dos testes de regressão funcional são automatizados.",
+        "C": "Testes de segurança: Uma análise de risco de ameaça é completada sem falhas identificadas.",
+        "D": "Testes de desempenho: A aplicação está respondendo em um tempo razoável com 5000 usuários.",
+        "E": "Testes de compatibilidade: A aplicação está trabalhando em todos os principais navegadores."
+      },
+      "correta": ["B", "C"],
+      "tipo": "Checkbox",
+      "imagens": [],
+      "level": "K2",
+      "explicacao": "B) e C) são critérios verificáveis (80% automatizado, análise de risco sem falhas). \"Tempo razoável\" e \"principais navegadores\" sem definição não são verificáveis."
+    },
+    {
+      "id": "36",
+      "questao": "Dada a seguinte história do usuário: \"Como caixa de banco, gostaria de poder ver todas as transações bancárias de meu cliente na tela, para poder responder suas perguntas\". Quais dos seguintes casos podem ser considerados como casos relevantes de teste de aceite? (1) Login como caixa do banco, obter o saldo da conta do cliente para todas as contas abertas (2) Entrar como caixa do banco, digitar a identificação da conta do cliente, obter seu histórico de transações na tela (3) Entrar como caixa do banco, solicitar a identificação da conta do cliente usando abreviações do nome e obter seu histórico de transações na tela. (4) Entrar como caixa do banco, digitar o IBAN do cliente, obter seu histórico de transações na tela (5) Faça o login como um Credor Bancário, digite o ID da conta do cliente, obtenha o histórico de Transações em menos de 3 segundos na tela",
+      "alternativas": {
+        "A": "1, 2, 4",
+        "B": "1, 3, 4",
+        "C": "2, 4, 5",
+        "D": "2, 3, 4"
+      },
+      "correta": "D",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K3",
+      "explicacao": "Os casos (2), (3) e (4) cobrem o caixa vendo o histórico de transações do cliente. (1) foca em saldo, não transações. (5) usa outro papel (Credor) e exige desempenho não mencionado na história."
+    },
+    {
+      "id": "37",
+      "questao": "Dada a seguinte história de usuário: \"Uma aplicação on-line cobra dos clientes o envio dos itens comprados, com base nos seguintes critérios: Custos de envio padrão para menos de 6 itens; O frete é de $5 para 6-10 itens; O envio é gratuito para mais de 10 itens\". Qual das seguintes é a melhor técnica de teste de modelagem caixa-preta para a história do usuário?",
+      "alternativas": {
+        "A": "Teste de transição de estado: Teste os seguintes estados - navegação, login, seleção, compra, confirmação e saída.",
+        "B": "Tabelas de decisão: Testar as seguintes condições - Usuário logado; Pelo menos 1 item no carrinho; Compra confirmada; Financiamento aprovado; com a ação resultante de - Enviar item.",
+        "C": "Análise do valor limite: Testar as seguintes entradas - 0, 5, 6, 10, 11, máximo",
+        "D": "Teste de caso de uso: Ator=cliente; Pré-requisitos=cliente faz login, seleciona e compra itens; Condições postais= itens são enviados"
+      },
+      "correta": "C",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K3",
+      "explicacao": "A Análise do Valor Limite (BVA) é a técnica mais adequada para testar regras baseadas em faixas numéricas (menos de 6, 6-10, mais de 10 itens) com entradas nos limites: 0, 5, 6, 10, 11 e máximo."
+    },
+    {
+      "id": "38",
+      "questao": "Seu gerente gostaria de introduzir testes exploratórios à sua equipe ágil. Ele recebeu as seguintes sugestões de colegas anteriores sobre como proceder: (1) As histórias de usuários são designadas a testadores que são completamente novos na história do usuário. São alocados 120 minutos para completar os testes exploratórios sobre a história do usuário. Os testadores não precisam documentar testes, ou resultados de testes, mas precisam registrar defeitos se algum for encontrado. (2) As histórias de usuários são atribuídas a testadores que já tenham completado testes baseados em risco nas mesmas áreas. São alocados 120 minutos para completar os testes exploratórios para esta história de usuário. A equipe espera ao final dos 120 minutos ter uma lista de ideias de testes, incluindo dados e atores, resultados e problemas encontrados, e uma lista de defeitos a serem registrados na ferramenta de gerenciamento de defeitos. (3) Uma história de usuário é atribuída ao representante comercial. O representante comercial é informado para usar o sistema como o cliente faria no dia-a-dia. Se forem encontrados problemas, o representante comercial é informado ao testador, para que ele possa priorizar e registrar o defeito. (4) Uma história de usuário é atribuída a um testador para testes exploratórios. Diz-se ao testador para aprender a funcionalidade da história do usuário, para garantir que a funcionalidade esteja correta e para incluir testes negativos. Não há prazo definido para que este teste exploratório seja concluído; ele depende do que for encontrado pelo testador. A documentação não é necessária, mas os defeitos precisam ser registrados na ferramenta de rastreamento de defeitos. Seu gerente lhe apresenta suas conclusões sobre a melhor forma de introduzir os testes exploratórios a uma equipe ágil. Qual das conclusões de seu gerente está correta?",
+      "alternativas": {
+        "A": "Cenário 1 NÃO É o melhor caminho porque: Nos testes exploratórios, o projeto e a execução dos testes acontecem ao mesmo tempo, mas são guiados por uma carta de teste documentada que inclui atores, condições de teste, dados de teste etc. Os resultados dos testes também são documentados e orientarão o próximo teste.",
+        "B": "O Cenário 2 é o melhor caminho porque: Neste caso, os testadores já têm conhecimento da história do usuário, o que os ajudará a apresentar as condições e ideias do teste. A equipe está usando sessões programadas de teste exploratório. Espera-se que a equipe documente as condições do teste, dados e informações do usuário, e que registre os resultados do teste. As questões são registradas em uma ferramenta de rastreamento de defeitos, como qualquer outra técnica de teste.",
+        "C": "O Cenário 3 NÃO É a melhor maneira porque: Isto poderia estar descrevendo testes de aceite do sistema, mas não testes exploratórios.",
+        "D": "O Cenário 4 NÃO É a melhor maneira porque: A documentação é necessária para testes exploratórios, e os testadores devem registrar as ideias de teste e os resultados dos testes. Os resultados dos testes são usados para orientar futuros testes exploratórios."
+      },
+      "correta": "A",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K3",
+      "explicacao": "No Cenário 1, não há carta de teste documentada nem documentação dos resultados. Nos testes exploratórios, projeto e execução acontecem juntos, mas são guiados por carta de teste e os resultados orientam o próximo teste. Por isso o Cenário 1 não é o melhor caminho."
+    },
+    {
+      "id": "39",
+      "questao": "Qual dos seguintes é um dos objetivos de uma ferramenta de Gerenciamento do Ciclo de Vida da Aplicação (ALM) em um projeto ágil?",
+      "alternativas": {
+        "A": "Permite às equipes construir uma base de conhecimento sobre ferramentas e técnicas para atividades de desenvolvimento e testes",
+        "B": "Fornece uma resposta rápida sobre a qualidade de construção e detalhes sobre mudanças de código",
+        "C": "Dá visibilidade ao estado atual da aplicação, especialmente com equipes distribuídas",
+        "D": "Gera e carrega grandes volumes e combinações de dados a serem usados para testes"
+      },
+      "correta": "C",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K1",
+      "explicacao": "Um dos objetivos de ferramentas ALM é dar visibilidade ao estado atual da aplicação, especialmente com equipes distribuídas. Resposta rápida sobre build é de ferramentas de CI; geração de dados é de outras ferramentas."
+    },
+    {
+      "id": "40",
+      "questao": "Qual das seguintes declarações é FALSA no que diz respeito aos testes exploratórios?",
+      "alternativas": {
+        "A": "Os testes exploratórios englobam aprendizagem simultânea, projeto e execução de testes.",
+        "B": "Os testes exploratórios eliminam a necessidade de os testadores prepararem ideias de teste antes da execução do teste.",
+        "C": "Os melhores resultados são alcançados quando os testes exploratórios são combinados com outras estratégias de teste.",
+        "D": "Os testadores exploratórios precisam ter uma compreensão sólida do sistema em teste."
+      },
+      "correta": "B",
+      "tipo": "Radio button",
+      "imagens": [],
+      "level": "K1",
+      "explicacao": "É FALSA: os testes exploratórios não eliminam a necessidade de preparar ideias de teste. As cartas de teste são criadas antes da execução, com objetivos e ideias de teste que guiam a sessão."
+    }
+  ]
+}
